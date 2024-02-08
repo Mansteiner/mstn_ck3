@@ -1,0 +1,10 @@
+﻿l_english:
+prestige_to_renown_title:0 "Convert Prestige to Dynasty Renown"
+prestige_to_renown_desc:0 "Our dynasty should be known all over the world!"
+prestige_to_renown_tooltip:0 "Get 100 renown instead of 500 prestige"
+prestige_to_renown_confirm:0 "Fame to our dynasty!"
+
+renowned_dynasty_title:0 "Claim Renowned Dynasty Trait"
+renowned_dynasty_desc:0 "I have to show the whole world my greatness!"
+renowned_dynasty_tooltip:0 "Get #N [GetTrait('renowned').GetName( GetPlayer )] trait"
+renowned_dynasty_confirm:0 "Descendants will be proud of me!"

@@ -1,0 +1,111 @@
+NCulture = {
+	MINIMUM_INNOVATIONS_TO_NEXT_ERA = 1									# Percentage of innovations to be able to go to the next era
+	ERA_PROGRESS_GAIN_BASE_MONTHLY = 0.1									# Base percentage gain every month for era exposure
+	ERA_PROGRESS_GAIN_MONTHLY_PER_AVERAGE_DEVELOPMENT_LEVEL = 0.05			# How much extra per average development level
+	FIRST_ERA_START_YEAR = 476												# When did the first era start?
+
+	# Regional exposure will start with the minimum number of regions from any of the next percentages
+	INNOVATION_REGIONAL_PERCENTAGE = 0.1									# Minimum percentage of region for regional innovations to get regional exposure
+	INNOVATION_CULTURE_PERCENTAGE_IN_REGION = 0.4							# Minimum percentage for a culture in a region to be exposed to get regional exposure
+
+	# Chance (0..100) to advance with the innovation each month:
+	# base + from exposure + from fascination
+	INNOVATION_PROGRESS_CHANCE_BASE = 5
+	INNOVATION_PROGRESS_CHANCE_FROM_EXPOSURE = 40							# if there is any exposure
+	# from fascination = base + max( 0, head learning skill - HEAD_LEARNING_BASE ) * PER_LEARNING_LEVEL
+	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_BASE = 20
+	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_HEAD_LEARNING_BASE = 0
+	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_PER_LEARNING_LEVEL = 1
+	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_NO_HEAD_LEARNING = 10		# used as the skill value if there is no cultural head
+
+	# If the random roll succeeds, the innovation will progress by:
+	# base + from development + from eras ahead
+	INNOVATION_PROGRESS_GAIN_BASE = 0.3
+	INNOVATION_PROGRESS_GAIN_PER_AVERAGE_DEVELOPMENT_LEVEL = 0.02
+	INNOVATION_PROGRESS_GAIN_PER_ERA_AHEAD = 0.2
+	MINIMUM_DYNASTY_NAMES = 2 # We'll log an error for any culture with less dynasty names than this. Dynasty names from the culture group will count
+
+	# This counts the # of border counties. So if culture A has a county that borders a single county of culture B, that's 2 border counties. If it bordered 2, it'd be 3 border counties, as each individual county can only get counted once
+	YEARLY_ACCEPTANCE_PER_BORDER_COUNTY = 0.05
+	MAX_YEARLY_ACCEPTANCE_PER_BORDER_COUNTY = 1
+	MAX_ACCEPTANCE_FROM_SHARED_REALMS = 0.5 # If 100% of both cultures are in the same realm, acceptance will increase by this much each year. For each realm with both cultures we take the % of each culture that's present in the realm and multiply them with one another. E.G., if a realm has 50% of all Norwegian counties and 40% of all Swedish cultures, that'll contribute 50% * 40% * MAX_ACCEPTANCE_FROM_SHARED_REALMS to acceptance each year
+	# Acceptance per year per vassal of each tier
+	# This is then divided by the size of the smaller of the two cultures, or by MIN_CULTURE_SIZE_FOR_VASSAL_ACCEPTANCE if that's bigger
+	# So a king vassal gives the same gain for a small culture as two king vassals for one that's twice as big
+	# We don't support baron vassals for this
+	YEARLY_ACCEPTANCE_FROM_TIER = { 0 0 1 3 10 0 }
+	MAX_YEARLY_ACCEPTANCE_FROM_VASSALS = 0.5 # We don't give more than this from vassalage
+	MIN_CULTURE_SIZE_FOR_VASSAL_ACCEPTANCE = 5 # We pretend neither culture involved is smaller than this
+	ACCEPTANCE_REDUCTION_FROM_NO_INTERACTION = 0.5 # If two cultures gain no acceptance at all from bordering, vassals, or shared realm, their acceptance will go down by this amount each year. Cultures with the same heritage are exempt
+	ACCEPTANCE_REGRESSION_TOWARDS_BASELINE = 1 # At 100% past the baseline it ticks down at this rate per year. Scaled from 0 to 100%, so at 50% it'd be half this value
+	MIN_ACCEPTANCE_REGRESSION_TOWARDS_BASELINE = 0.1 # Regression towards zero can't go below this (except to avoid overshooting the baseline)
+	ACCEPTANCE_DIMINISHING_RETURNS = 0.5 # At 100%, increases are reduced by this much. Scaled from 0 to 100%, ignores baseline
+	CULTURE_ACCEPTANCE_CHANGELOG_DURATION = 10 # After how many years do fervor changelog entries get deleted?
+	DEFAULT_MAX_TRADITIONS = 16 # How many traditions can a culture have by default?
+	CULTURE_COLOR_DEVIATION = { 0.1 0.15 } # How much should generated colors differ from the culture they're based on? Distance within the HSV colorspace
+	HYBRID_GFX_CHANCE = 0.666 # What's the chance that a GFX culture that can be made into a hybrid will be? Used for the AI, the default selection, and when making a culture through script
+	HYBRID_NAMING_CHANCE = 0.666 # What's the chance hybrid name lists will be used? Used for the AI, the default selection, and when making a culture through script
+
+	REFORMATION_PROGRESS_GAIN_BASE = 5 # The base monthly progress gain when reforming. Finished at 100. Base speed at 1.66 results in minimum 5 years.
+	REFORMATION_PROGRESS_SLOWDOWN_PER_COUNTY_WITH_CULTURE = 0.01 # How much slower is the reformation per county with the culture. The final progress is calculated: (TotalGain) / (NrCounties * SlowdownFactor)
+	REFORMATION_PROGRESS_REPLACE_TRADITION_MULT = 0.75 # A multiplier to the total progress when replacing traditions.
+	REFORMATION_MAX_YEARS = 15 # The slowdown per county will be capped at a value that limits the max years a reformation can take to this value. Replacing traditions will go over this limit.
+}
+NDynasty = {
+	MONTHLY_PRESTIGE_GAIN_PER_MEMBER = 0.02 # Was 0.2 per year, should be then 0.016 recurring but that is ugly so round to 0.015
+	MAX_MONTHLY_PRESTIGE_GAIN_FROM_ALIVE_MEMBERS = 2 # Cap the above number
+	MONTHLY_PRESTIGE_GAIN_PER_TITLE_TIER = { 0 0.125 0.25 0.5 1 2 } # When per year was { 0 2 4 6 8 10 }
+	MONTHLY_PRESTIGE_GAIN_MULT_FOR_VASSALS_OF_SAME_DYNASTY = 0	# Dynasty members who are vassal of below of someone of the same dynasty have their prestige contribution multiplied with this. 0 disables their prestige contribution entirely
+	MONTHLY_PRESTIGE_GAIN_PER_TITLE_TIER_SPOUSE = { 0 0.1 0.2 0.4 0.8 1.6 } # When per year was { 0 2 4 6 8 10 }
+	MONTHLY_PRESTIGE_GAIN_MULT_FOR_VASSALS_OF_SAME_DYNASTY_SPOUSE = 0	# Dynasty members whose spouse are vassal of below of someone of the same dynasty have their prestige contribution multiplied with this. 0 disables their prestige contribution entirely
+	LEVELS_PRESTIGE = { 300	1000	2000	4000	7000	11000	16000	22000	29000	37000 }
+	LEVEL_DROP_MAX_RETAINED_PROGRESS_PRESTIGE = 0.5
+	LEVELS_PRESTIGE_GRAPHICAL_STEP = 2
+	BASE_PRESTIGE_EXPERIENCE = 300
+	PRESTIGE_ZERO_LEVEL = 0
+	MARRIAGE_PRESTIGE = { -100	0	100	200	300	400	500	600	700	800 900 }
+	BIRTH_PRESTIGE = { 0	100	200	300	400	500	600	700	800 900	1000 }
+	MAX_LONG_REIGN = { 5	10	15	20	25	30	35	40	45 50	55 }
+	HEAD_MONTHLY_PRESTIGE_GAIN_PER_TITLE_TIER = { 0 0.01 0.02 0.03 0.04 0.05 }
+	HEAD_MONTHLY_PRESTIGE_GAIN_PER_MEMBER = 0.01
+	HEAD_MONTHLY_PRESTIGE_GAIN_CAP = 3	
+	CURRENT_DYNAST_EXTRA_POWER = 0.1		# For determining who should by dynast, the current dynast is considered to be this much more powerful than reality so that it doesn't bounce back and forth. 0.1 means 10%
+
+	NAMING_CHANCE_CULTURE = 25
+	NAMING_CHANCE_TITLE = 50
+
+	CADET_COA_BASE_PATTERN = "pattern_solid.dds" # Pattern used for in the background of a tiled cadet branch CoA
+
+	PERK_COST_BASE = 1600		# Used to determine what the cost of the next legacy perk is going to be. It's calculated as: COST = PERK_COST_BASE + (Number of Unlocked Perks * PERK_COST_MULTIPLIER)
+	PERK_COST_MULTIPLIER = 0	# Used to determine what the cost of the next legacy perk is going to be. It's calculated as: COST = PERK_COST_BASE + (Number of Unlocked Perks * PERK_COST_MULTIPLIER)
+}
+NDomain = {
+	ABOVE_LIMIT_LEVY_PENALTY = 0.2				# How much levies are reduced per holding over the limit
+	ABOVE_LIMIT_MAX_LEVY_PENALTY = 1			# How much levies can be reduced at most
+	ABOVE_LIMIT_TAX_INCOME_PENALTY = 0.2		# How much tax income from domain is reduced per holding over the limit
+	ABOVE_LIMIT_MAX_TAX_INCOME_PENALTY = 1		# How much tax income from domain can be reduced at most
+	HOLDING_GRACE_PERIOD = 365					# How many days do newly gained holdings not count towards the domain size for the purposes of penalties (but also not produce any levies)
+	STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE = 6	# domain limit += floor( <stewardship skill> / STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE )
+	LEVIES_AT_ZERO_COUNTY_CONTROL = 0.0			# How many % levies do you get at 0 county control? Interpolated between this value and 100% when between 0 and 100
+	TAX_AT_ZERO_COUNTY_CONTROL = 0.0			# How much % tax do you get at 0 county control? Interpolated between this value and 100% when between 0 and 100
+	LEVIES_AT_MAX_COUNTY_DEVELOPMENT = 0.0		# How many % levies bonus do you get at 100 county development? Interpolated between this value and 0% when between 0 and 100
+	TAX_AT_MAX_COUNTY_DEVELOPMENT = 2.0			# How much % tax bonus do you get at 100 county development? Interpolated between this value and 0% when between 0 and 100
+	HOLDING_MIN_GARRISON_COUNT = 25				# The minimal amount of garrisons a holding should have if it should have garrisons
+}
+NProvince = {
+	BASE_SUPPLY_LIMIT = 4000					# The unmodified base supply limit of a province
+	BARONY_BUILDING_SLOTS = 4
+	COUNTY_BUILDING_SLOTS = 5
+	SUPPLY_PER_DEVELOPMENT = 300				# Each development adds this much sto the supply limit
+	ACROSS_WATER_PROVINCE_MAX_DISTANCE = 2		# Maximum number of (traversable) water provinces between provinces to be considered "connected across water"
+	WINTER_LEVEL_THRESHOLD_MILD = 0.2           # Determines when the mild winter level takes effect, should be a value between 0.0 .. 1.0
+	WINTER_LEVEL_THRESHOLD_NORMAL = 0.5         # Determines when the normal winter level takes effect, which ranges between WINTER_LEVEL_THRESHOLD_MILD .. 1.0
+	WINTER_LEVEL_THRESHOLD_HARSH = 0.9         # Determines when the harsh winter level takes effect, which ranges between WINTER_LEVEL_THRESHOLD_NORMAL .. 1.0
+	WINTER_EFFECTS_MINIMAL_DAY_COUNT = 10       # The target effects of winter are determined on a monthly basis, it will take a number of days to reach this target between this minimum and 27 (days in February - 1)
+	WINTER_EFFECTS_FACTOR_MILD = 0.45           # Bias that offsets the newly added value for winter (on a monthly basis) while a province has no or mild winter
+	WINTER_EFFECTS_FACTOR_NORMAL = 0.3		    # Bias that offsets the newly added value for winter (on a monthly basis) while a province has normal winter
+	WINTER_EFFECTS_FACTOR_HARSH = 0.15			# Bias that offsets the newly added value for winter (on a monthly basis) while a province has harsh winter
+	WINTER_SEVERITY_DEFAULT_BIAS = 0.1			# Default bias used when determining winter on a province that doesn't have a bias set explicitely
+	WINTER_SEVERITY_RANDOM_MIN = 0.5			# Sets the lower bound of the random value that is used when determining the next winter severity
+	WINTER_SEVERITY_RANDOM_MAX = 1.0			# Sets the upper bound of the random value that is used when determining the next winter severity
+}

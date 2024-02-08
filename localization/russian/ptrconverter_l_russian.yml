@@ -1,0 +1,10 @@
+﻿l_russian:
+prestige_to_renown_title:0 "Получить признание взамен престижа"
+prestige_to_renown_desc:0 "Наша династия должна быть известна во всех краях!"
+prestige_to_renown_tooltip:0 "Получить 100 признания за 500 престижа"
+prestige_to_renown_confirm:0 "Почёт нашей династии!"
+
+renowned_dynasty_title:0 "Получить трейт на признание"
+renowned_dynasty_desc:0 "Я должен показать всему миру свое величие!"
+renowned_dynasty_tooltip:0 "Получить трейт #N [GetTrait('renowned').GetName( GetPlayer )]"
+renowned_dynasty_confirm:0 "Потомки будут горды мной!"

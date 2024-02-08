@@ -1,0 +1,6 @@
+﻿l_simp_chinese:
+ mstn_commencer_plan_title:0 "开始学习计划"
+ mstn_commencer_plan_desc:0 "俗话说：“学无止境。”人的一生都是在学习之中的，如果放弃了进步，就会让我和我的国家落后于时代！所以，不能再颓废下去了！我要找一些方法精进我的能力！"
+ mstn_commencer_plan_tooltip:0 "你将用#EMP 1年时间#!执行计划，中途将会有#EMP 一系列事件#!修正#EMP 最终的学习效果#!。"
+ mstn_commencer_plan_confirm:0 "打开计划本！"
+ mstn_msg_plan_focus:0 "勤勉学习终成正果！"

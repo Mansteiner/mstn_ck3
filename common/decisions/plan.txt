@@ -1,0 +1,35 @@
+mstn_commencer_plan = { #开始学习计划
+	ai_check_interval = 0
+
+	picture = gfx/interface/illustrations/decisions/decision_realm.dds
+	title = mstn_commencer_plan_title
+	desc = mstn_commencer_plan_desc
+	selection_tooltip = mstn_commencer_plan_tooltip
+	confirm_text = mstn_commencer_plan_confirm
+
+	is_shown = { always = yes }
+
+	cooldown = { years = 1 }
+
+	cost = { prestige = 150 }
+	effect = {
+		send_interface_toast = {
+			title = mstn_msg_plan_focus
+			left_icon = root
+
+			add_character_modifier = {
+				modifier = mstn_plan_diligent_modifier
+				years = 5
+			}
+		}
+		stress_impact = {
+			diligent = medium_stress_impact_loss
+			lazy = medium_stress_impact_gain
+		}
+		trigger_event = mstn_etude_plan.1001
+	}
+
+	ai_potential = { always = no }
+
+	ai_will_do = { base = 0 }
+}

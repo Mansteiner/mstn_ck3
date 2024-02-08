@@ -1,0 +1,35 @@
+mstn_plan_diligent_modifier = {
+	icon = magic_positive
+	monthly_lifestyle_xp_gain_mult = 0.25
+}
+mstn_plan_diplomacy_modifier = {
+	icon = diplomacy_positive
+	general_opinion = 10
+	monthly_prestige_gain_mult = 0.20
+}
+mstn_plan_martial_modifier = {
+	icon = martial_positive
+	knight_effectiveness_mult = 0.20
+	advantage = 5
+}
+mstn_plan_stewardship_modifier = {
+	icon = stewardship_positive
+	domain_tax_mult = 0.15
+	build_speed = -0.20
+}
+mstn_plan_intrigue_modifier = {
+	icon = intrigue_positive
+	scheme_power = 15
+	scheme_resistance = 15
+	scheme_secrecy = 15
+}
+mstn_plan_learning_modifier = {
+	icon = learning_positive
+	cultural_head_fascination_mult = 0.20
+	development_growth_factor = 0.20
+}
+mstn_plan_prowess_modifier = {
+	icon = prowess_positive
+	health = 0.25
+	negate_health_penalty_add = 0.25
+}

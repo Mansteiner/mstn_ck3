@@ -1,0 +1,63 @@
+﻿convert_prestige_to_renown = {
+	ai_check_interval = 0
+
+	picture = gfx/interface/illustrations/decisions/decision_knight_kneeling.dds
+	title = prestige_to_renown_title
+	desc = prestige_to_renown_desc
+	selection_tooltip = prestige_to_renown_tooltip
+	confirm_text = prestige_to_renown_confirm
+
+	is_shown = {
+		ai = no
+	}
+
+	is_valid = {
+		prestige_level >= 3
+	}
+
+	cooldown = { years = 1 }
+
+	cost = {
+		prestige = 500
+	}
+
+	effect = {
+		dynasty = {
+			add_dynasty_prestige = 250
+		}
+	}
+
+	ai_will_do = 0
+}
+renowned_dynasty_decision = {
+	ai_check_interval = 0
+
+	picture = gfx/interface/illustrations/decisions/decision_knight_kneeling.dds
+	title = renowned_dynasty_title
+	desc = renowned_dynasty_desc
+	selection_tooltip = renowned_dynasty_tooltip
+	confirm_text = renowned_dynasty_confirm
+
+	is_shown = {
+		ai = no
+	}
+
+	is_valid = {
+		prestige_level >= 5
+		NOT = {
+			has_trait = renowned
+		}
+	}
+
+	cooldown = { years = 30 }
+
+	cost = {
+		prestige = 3500
+	}
+
+	effect = {
+		add_trait = renowned
+	}
+
+	ai_will_do = 0
+}

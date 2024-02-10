@@ -10,6 +10,9 @@ culture_era_early_medieval = {
 	culture_modifier = {
 		culture_tradition_max_add = 4
 	}
+	county_modifier = {
+		building_slot_add = 1
+	}
 
 	custom = more_expensive_court_positions
 	custom = increased_activity_cost
@@ -59,6 +62,9 @@ culture_era_high_medieval = {
 	
 	culture_modifier = {
 		culture_tradition_max_add = 4
+	}
+	county_modifier = {
+		building_slot_add = 1
 	}
 	
 	character_modifier = {
@@ -135,6 +141,9 @@ culture_era_late_medieval = {
 	
 	culture_modifier = {
 		culture_tradition_max_add = 4
+	}
+	county_modifier = {
+		building_slot_add = 1
 	}
 
 	character_modifier = {

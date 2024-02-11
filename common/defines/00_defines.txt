@@ -1,5 +1,5 @@
 NCulture = {
-	MINIMUM_INNOVATIONS_TO_NEXT_ERA = 0.9									# Percentage of innovations to be able to go to the next era
+	MINIMUM_INNOVATIONS_TO_NEXT_ERA = 1.0									# Percentage of innovations to be able to go to the next era
 	ERA_PROGRESS_GAIN_BASE_MONTHLY = 0.1									# Base percentage gain every month for era exposure
 	ERA_PROGRESS_GAIN_MONTHLY_PER_AVERAGE_DEVELOPMENT_LEVEL = 0.05			# How much extra per average development level
 	FIRST_ERA_START_YEAR = 476												# When did the first era start?

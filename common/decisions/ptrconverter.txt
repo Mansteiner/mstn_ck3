@@ -7,25 +7,12 @@
 	selection_tooltip = prestige_to_renown_tooltip
 	confirm_text = prestige_to_renown_confirm
 
-	is_shown = {
-		ai = no
-	}
-
-	is_valid = {
-		prestige_level >= 3
-	}
-
+	is_shown = { ai = no }
+	is_valid = { prestige_level >= 3 }
 	cooldown = { years = 1 }
+	cost = { prestige = 500 }
 
-	cost = {
-		prestige = 500
-	}
-
-	effect = {
-		dynasty = {
-			add_dynasty_prestige = 250
-		}
-	}
+	effect = { dynasty = { add_dynasty_prestige = 250 } }
 
 	ai_will_do = 0
 }
@@ -38,26 +25,15 @@ renowned_dynasty_decision = {
 	selection_tooltip = renowned_dynasty_tooltip
 	confirm_text = renowned_dynasty_confirm
 
-	is_shown = {
-		ai = no
-	}
-
+	is_shown = { ai = no }
 	is_valid = {
 		prestige_level >= 5
-		NOT = {
-			has_trait = renowned
-		}
+		NOT = { has_trait = renowned }
 	}
-
 	cooldown = { years = 30 }
+	cost = { prestige = 3500 }
 
-	cost = {
-		prestige = 3500
-	}
-
-	effect = {
-		add_trait = renowned
-	}
+	effect = { add_trait = renowned }
 
 	ai_will_do = 0
 }

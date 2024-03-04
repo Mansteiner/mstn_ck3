@@ -36,32 +36,26 @@ mstn_etude_plan.1001 = { #开始学习，决定主题
 
 	option = {
 		name = mstn_etude_plan.1001.a
-		add_diplomacy_skill = 3
 		add_character_modifier = { modifier = mstn_plan_diplomacy_modifier years = 3}
 	}
 	option = {
 		name = mstn_etude_plan.1001.b
-		add_martial_skill = 3
 		add_character_modifier = { modifier = mstn_plan_martial_modifier years = 3}
 	}
 	option = {
 		name = mstn_etude_plan.1001.c
-		add_stewardship_skill = 3
 		add_character_modifier = { modifier = mstn_plan_stewardship_modifier years = 3}
 	}
 	option = {
 		name = mstn_etude_plan.1001.d
-		add_intrigue_skill = 3
 		add_character_modifier = { modifier = mstn_plan_intrigue_modifier years = 3}
 	}
 	option = {
 		name = mstn_etude_plan.1001.e
-		add_learning_skill = 3
 		add_character_modifier = { modifier = mstn_plan_learning_modifier years = 3}
 	}
 	option = {
 		name = mstn_etude_plan.1001.f
-		add_prowess_skill = 3
 		add_character_modifier = { modifier = mstn_plan_prowess_modifier years = 3}
 	}
 }

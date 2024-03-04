@@ -9,7 +9,7 @@ mstn_commencer_plan = { #开始学习计划
 
 	is_shown = { always = yes }
 
-	cooldown = { years = 1 }
+	cooldown = { years = 3 }
 
 	cost = { prestige = 150 }
 	effect = {

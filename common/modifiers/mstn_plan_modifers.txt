@@ -4,32 +4,38 @@ mstn_plan_diligent_modifier = {
 }
 mstn_plan_diplomacy_modifier = {
 	icon = diplomacy_positive
+	diplomacy = 4
 	general_opinion = 10
 	monthly_prestige_gain_mult = 0.20
 }
 mstn_plan_martial_modifier = {
 	icon = martial_positive
+	martial = 4
 	knight_effectiveness_mult = 0.20
 	advantage = 5
 }
 mstn_plan_stewardship_modifier = {
 	icon = stewardship_positive
+	stewardship = 4
 	domain_tax_mult = 0.15
 	build_speed = -0.20
 }
 mstn_plan_intrigue_modifier = {
 	icon = intrigue_positive
+	intrigue = 4
 	scheme_power = 15
 	scheme_resistance = 15
 	scheme_secrecy = 15
 }
 mstn_plan_learning_modifier = {
 	icon = learning_positive
+	learning = 4
 	cultural_head_fascination_mult = 0.20
 	development_growth_factor = 0.20
 }
 mstn_plan_prowess_modifier = {
 	icon = prowess_positive
+	prowess = 4
 	health = 0.25
 	negate_health_penalty_add = 0.25
 }

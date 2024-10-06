@@ -1,0 +1,4 @@
+﻿mstn = {
+	sort_order = 70
+	gui_tags = { big_button }
+}

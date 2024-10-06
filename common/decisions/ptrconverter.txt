@@ -1,7 +1,8 @@
 ﻿convert_prestige_to_renown = {
 	ai_check_interval = 0
 
-	picture = gfx/interface/illustrations/decisions/decision_knight_kneeling.dds
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds" }
+	decision_group_type = mstn
 	title = prestige_to_renown_title
 	desc = prestige_to_renown_desc
 	selection_tooltip = prestige_to_renown_tooltip
@@ -19,7 +20,8 @@
 renowned_dynasty_decision = {
 	ai_check_interval = 0
 
-	picture = gfx/interface/illustrations/decisions/decision_knight_kneeling.dds
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds" }
+	decision_group_type = mstn
 	title = renowned_dynasty_title
 	desc = renowned_dynasty_desc
 	selection_tooltip = renowned_dynasty_tooltip

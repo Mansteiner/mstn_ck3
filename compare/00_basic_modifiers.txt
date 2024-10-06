@@ -38,7 +38,6 @@ martial_modifier_with_offset = {
 
 learning_modifier = {
 	monthly_piety = 0.1
-	monthly_lifestyle_xp_gain_mult = 0.005
 }
 
 prowess_modifier = {

@@ -350,7 +350,7 @@ steward_promote_culture_base = 0.25
 
 steward_promote_culture_monthly_increase = {
 	add = stewardship
-	divide = 5
+	divide = 20
 }
 
 steward_promote_culture_contextual_bonuses = {
@@ -504,7 +504,7 @@ steward_promote_culture_contextual_bonuses = {
 			desc = COURT_CHAPLAIN_CONVERSION_LOCAL_COUNTY_MODIFIERS
 		}
 	}
-		if = {
+	if = {
 		limit = {
 			exists = scope:county
 			scope:county = { has_county_modifier = easier_to_culture_convert }
@@ -564,7 +564,7 @@ steward_promote_culture_contextual_bonuses = {
 			desc = CONSULTED_HOUSE_BONUS_VALUE
 		}
 	}
-		if = {
+	if = {
 		limit = {
 			scope:county = {
 				OR = {
@@ -891,7 +891,7 @@ promote_culture_development_penalty = {
 		add = scope:councillor.steward_promote_culture_contextual_bonuses
 		multiply = {
 			subtract = scope:county.development_level
-			divide = 200
+			divide = 100
 			min = -0.9
 		}
 	}

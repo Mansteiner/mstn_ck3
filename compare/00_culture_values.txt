@@ -214,7 +214,7 @@ hybridization_ai_threshold_value = {
 }
 
 culture_divergence_cooldown = {
-	value = 50
+	value = 100
 	# Game Rules
 	if = {
 		limit = {
@@ -249,7 +249,7 @@ culture_hybrid_cooldown = {
 		limit = {
 			has_game_rule = faster_hybrid_and_divergence_cooldowns
 		}
-		add = -50
+		add = -25
 	}
 	else_if = {
 		limit = {
@@ -258,15 +258,15 @@ culture_hybrid_cooldown = {
 		multiply = 0
 	}
 }
-add_tradition_cooldown = 5
+add_tradition_cooldown = 50
 
 tradition_base_cost = 2000
 tradition_double_base_cost = {
 	value = tradition_base_cost
 	multiply = 2
 }
-tradition_incompatible_ethos_penalty = 800
-tradition_unfulfilled_criteria_penalty = 1000
+tradition_incompatible_ethos_penalty = 2000
+tradition_unfulfilled_criteria_penalty = 3000
 tradition_replacement_cost_factor = 1.5
 tradition_replacement_cost_factor_tooltip = {
 	value = tradition_replacement_cost_factor
@@ -357,7 +357,7 @@ culture_size_penalty = {
 	add = {
 		add = scope:culture.culture_realm_size_cost_scopes
 		subtract = root.culture.culture_realm_size_cost_scopes
-		multiply = 0
+		multiply = 50
 	}
 }
 
@@ -384,12 +384,12 @@ divergence_yearly_chance = {
 }
 
 # % values used in events
-miniscule_positive_culture_acceptance = 5
-low_positive_culture_acceptance = 10
-medium_positive_culture_acceptance = 20
-miniscule_negative_culture_acceptance = -5
-low_negative_culture_acceptance = -10
-medium_negative_culture_acceptance = -20
+miniscule_positive_culture_acceptance = 2
+low_positive_culture_acceptance = 5
+medium_positive_culture_acceptance = 10
+miniscule_negative_culture_acceptance = -2
+low_negative_culture_acceptance = -5
+medium_negative_culture_acceptance = -10
 
 ### CULTURAL ACCEPTANCE VALUES ###
 miniscule_cultural_acceptance_value = 1

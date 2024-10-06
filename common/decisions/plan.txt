@@ -1,7 +1,8 @@
-mstn_commencer_plan = { #开始学习计划
+﻿mstn_commencer_plan = { #开始学习计划
 	ai_check_interval = 0
 
-	picture = gfx/interface/illustrations/decisions/decision_realm.dds
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_realm.dds" }
+	decision_group_type = mstn
 	title = mstn_commencer_plan_title
 	desc = mstn_commencer_plan_desc
 	selection_tooltip = mstn_commencer_plan_tooltip
@@ -9,7 +10,7 @@ mstn_commencer_plan = { #开始学习计划
 
 	is_shown = { always = yes }
 
-	cooldown = { years = 3 }
+	cooldown = { years = 2 }
 
 	cost = { prestige = 150 }
 	effect = {
